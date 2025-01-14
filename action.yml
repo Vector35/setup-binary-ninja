@@ -1,6 +1,6 @@
 name: 'Setup Binary Ninja environment'
 description: 'Setup Binary Ninja within your github actions runner'
-author: 'emesare'
+author: 'Vector35'
 branding:
   icon: 'bold'
   color: 'red'
@@ -22,5 +22,5 @@ outputs:
   install-path:
     description: "Where Binary Ninja was installed"
 runs:
-  using: "node16"
+  using: "node20"
   main: "dist/index.js"

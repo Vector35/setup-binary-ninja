@@ -14,7 +14,7 @@ try {
     const extractPath = path.normalize(core.getInput('extract-path'));
     const downloadUrl = core.getInput('download-url');
     const useDevBranch = core.getInput('dev-branch').toLowerCase();
-    const pythonSupport = core.getInput('python-support').toLowerCase() == "true";
+    const pythonSupport = core.getInput('python-support').toLowerCase() === "true";
 
     if (!fs.existsSync(extractPath)) throw Error("`extract-path` does not exist!");
     if (!fs.lstatSync(extractPath).isDirectory()) throw Error("`extract-path` is not a directory!");
@@ -23,8 +23,8 @@ try {
     core.setOutput("install-path", installPath);
     core.info("Installing Binary Ninja to: " + installPath);
 
-    // Get unique download Url (unless overriden)
-    if (downloadUrl == "") {
+    // Get unique download Url (unless overridden)
+    if (downloadUrl === "") {
         got(RETRIEVAL_DOWNLOAD_URL,
             {
                 searchParams: {
@@ -33,7 +33,7 @@ try {
                 }
             }
         ).json().then(retrievalData => {
-            if (retrievalData.ok == false) throw Error(retrievalData.message);
+            if (retrievalData.ok === false) throw Error(retrievalData.message);
             // Mask unique download Url
             core.setSecret(retrievalData.url);
             got.stream(retrievalData.url).pipe(unzipper.Extract({ path: extractPath }));
