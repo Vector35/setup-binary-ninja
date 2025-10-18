@@ -9,14 +9,14 @@ This only supports Linux, if you want to run on Windows or MACOS runners you wil
 When using this action it should be noted that the license input should basically always be a secret.
 
 ```yaml
-uses: Vector35/setup-binary-ninja@v1
+uses: Vector35/setup-binary-ninja@v1-beta
 with:
   license: '${{ secrets.BN_SERIAL }}'
 ```
 
 ## Example workflows
 
-- [binja-msvc](https://github.com/emesare/binja-msvc/actions/runs/5149259751/jobs/9272034289)
+- [binja-msvc](https://github.com/emesare/binja-msvc/)
 
 ## Inputs
 
