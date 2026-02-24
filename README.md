@@ -69,4 +69,4 @@ Oddly enough GitHub actions requires the distributed bundle to be in-tree, when 
 
 ## Free License
 
-Are you maintaining an open source plugin that could use a dedicated headless license to run test or build processes in an automated action? Contact [support](https://binary.ninja/support)! For qualified plugins and developers we make free licenses available for just such a purpose.
+Are you maintaining an open source plugin that could use a dedicated headless license to run tests or a build processes in an action? Contact [support](https://binary.ninja/support)! For qualified plugins and developers we sometimes make free licenses available.
