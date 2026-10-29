@@ -22,5 +22,5 @@ outputs:
   install-path:
     description: "Where Binary Ninja was installed"
 runs:
-  using: "node20"
+  using: "node24"
   main: "dist/index.js"
