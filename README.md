@@ -2,14 +2,14 @@
 
 This action installs [Binary Ninja] for testing and building both native and python plugins within GitHub CI. 
 
-This only supports Linux, if you want to run on Windows or MACOS runners you will need to manually create a headless version of [Binary NInja] and pass in the `download-url`.
+This only supports Linux, if you want to run on Windows or MACOS runners you will need to manually create a headless version of [Binary Ninja] and pass in the `download-url`.
 
 ## Example usage
 
 When using this action it should be noted that the license input should basically always be a secret.
 
 ```yaml
-uses: Vector35/setup-binary-ninja@v1-beta
+uses: Vector35/setup-binary-ninja@v1
 with:
   license: '${{ secrets.BN_SERIAL }}'
 ```
